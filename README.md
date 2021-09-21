@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Страница для тестирования компонентов из Дизайн системы "consta-uikit"
 
 ## Available Scripts
 
