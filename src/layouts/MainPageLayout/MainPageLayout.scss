@@ -1,0 +1,39 @@
+.MainPageLayout {
+
+    &-ContentContainer {
+        width: 918px;
+        margin: 0 auto;
+    }
+
+    &-HeaderContainer {
+        width: 100%;
+    }
+}
+.Header {
+    background-color: #0078D2 !important;
+    padding-bottom: 1px !important;
+    & .User .Text {
+        color: #fff !important;
+    }
+}
+.HeaderMenu-Link {
+    opacity: 0.6;
+    color: #fff !important;
+    &.HeaderMenu-Link_active {
+        opacity: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 100%;
+            max-width: 40px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 4px 4px 0 0;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+}

@@ -1,0 +1,78 @@
+.MainPage {
+    margin-bottom: 30px;
+    &-Title {
+        margin-bottom: 8px;
+        &.small {
+            margin-top: 32px;
+            margin-bottom: 24px;
+        }
+    }
+    &-Subtitle {
+        &-block {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+    }
+
+}
+.Breadcrumbs {
+    margin-top: 36px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 66, 105, 0.28);
+    margin-bottom: 24px;
+}
+.Badge {
+    padding: 0 4px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    &.ghost {
+        color: #97B2C4;
+        border: 1px solid #DEE4E8;
+    }
+    &.violet {
+        border: none;
+        color: #fff;
+        background-color: #B029DF;
+    }
+}
+.Parametrs {
+    &-block {
+        display: grid;
+        grid-template-columns: 326px 326px auto;
+        grid-gap: 16px;
+        margin-bottom: 16px;
+
+    }
+    &-item{
+        &__label {
+            margin-bottom: 16px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+.Pagination {
+    margin-top: 16px;
+    margin-bottom: 12px;
+    justify-content: space-between !important;
+    & .Pagination-Input {
+        width: 57px;
+    }
+}
+.Informer {
+    margin-bottom: 12px;
+}
+.Groupe-Wrap {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 30px;
+    margin-bottom: 30px;
+}
