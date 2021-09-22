@@ -8,18 +8,18 @@
     &-HeaderContainer {
         width: 100%;
     }
-}
-.Header {
-    background-color: #0078D2 !important;
-    padding-bottom: 1px !important;
-    & .User .Text {
-        color: #fff !important;
+    .Header {
+        background-color: #0078D2;
+        padding-bottom: 1px;
+        & .User .Text {
+            color: #fff;
+        }
     }
-}
-.HeaderMenu-Link {
-    opacity: 0.6;
-    color: #fff !important;
-    &.HeaderMenu-Link_active {
+    .HeaderMenu-Link {
+        opacity: 0.6;
+        color: #fff;
+    }
+    .HeaderMenu-Link_active {
         opacity: 1;
         &::before {
             content: '';
@@ -35,5 +35,5 @@
             transform: translateX(-50%);
         }
     }
-
 }
+
