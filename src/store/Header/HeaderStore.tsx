@@ -24,7 +24,7 @@ class HeaderStore {
         info: "Cейсмик"
     };
 
-    menuItems: Array<ItemType> = [
+    menuItems: ItemType[] = [
         {
             label: "Раздел 1",
             href: "razdel_1"

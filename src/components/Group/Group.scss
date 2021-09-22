@@ -1,17 +1,17 @@
 .Group {
-  &-item {
+  &-Item {
     margin: 0;
   }
-  &-title {
+  &-Title {
     font-weight: 700;
     padding-bottom: 8px;
     font-size: 16px;
     border-bottom: 1px solid  rgba(0, 65, 102, 0.2);
   }
-  &-info-block {
+  &-InfoBlock {
     padding-top: 15px;
   }
-  &-row {
+  &-Row {
     display: flex;
     justify-content: space-between;
     align-items: center;

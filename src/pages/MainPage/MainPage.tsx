@@ -18,14 +18,14 @@ import store, { ChouseItem, OptionSelectType } from "../../store/MainPage/MainPa
 import Group from "../../components/Group/Groups";
 
 export default function MainPage(): JSX.Element {
-    /** ChouseGroupe */
-    const [chouseGroupValue, setChouseGroupeValue] =
-        useState<ChouseItem | null>(store.ChouseGroupItems[0]);
+    /** ChouseGroup */
+    const [choiseGroupValue, setChoiseGroupValue] =
+        useState<ChouseItem | null>(store.choiseGroupItems[0]);
     /** textField */
     const [textFieldValue, setTextFieldValue] = useState("500000");
     const handleTextFieldChange = ({ value }) => setTextFieldValue(value);
     /** select */
-    const [SelectValue, setSelectValue] = useState<OptionSelectType | null>();
+    const [selectValue, setSelectValue] = useState<OptionSelectType | null>();
     /** pagination */
     const [currentPage, setCurrentPage] = React.useState<number>(0);
     const totalPages = 10;
@@ -42,6 +42,13 @@ export default function MainPage(): JSX.Element {
     const handleChange = (pageNumber: any): void => {
         setCurrentPage(pageNumber);
     };
+    /**
+     * Test text
+     * */
+    const testText =
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut " +
+        "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris " +
+        "nisi ut aliquip ex ea commodo consequat.";
     return (
         <MainPageLayout>
             <div className="MainPage">
@@ -64,9 +71,9 @@ export default function MainPage(): JSX.Element {
                     <Badge status="normal" label="Важное" />
                 </div>
                 <ChoiceGroup
-                    value={chouseGroupValue}
-                    items={store.ChouseGroupItems}
-                    onChange={({ value }) => setChouseGroupeValue(value)}
+                    value={choiseGroupValue}
+                    items={store.choiseGroupItems}
+                    onChange={({ value }) => setChoiseGroupValue(value)}
                     getLabel={(item) => item}
                     multiple={false}
                     view="ghost"
@@ -81,9 +88,9 @@ export default function MainPage(): JSX.Element {
                             <div className="Parametrs-item__label">Параметр 1</div>
                             <Select
                                 placeholder="Выберите значение"
-                                items={store.SelectOptions}
-                                value={SelectValue}
-                                onChange={({ value: v }) => setSelectValue(v)}
+                                items={store.selectOptions}
+                                value={selectValue}
+                                onChange={({ value }) => setSelectValue(value)}
                             />
                         </div>
                         <div className="Parametrs-item">
@@ -96,8 +103,8 @@ export default function MainPage(): JSX.Element {
                 <div>
                     <Text className="MainPage-Title small" size="l" weight="bold">Заголовок</Text>
                     <Table
-                        columns={store.MainPageTableColumn}
-                        rows={store.MainPageTableRows}
+                        columns={store.мainPageTableColumn}
+                        rows={store.мainPageTableRows}
                         zebraStriped="odd"
                         size="m"
                     />
@@ -113,13 +120,13 @@ export default function MainPage(): JSX.Element {
                 </div>
                 <div>
                     <Text className="MainPage-Title small" size="l" weight="bold">Заголовок</Text>
-                    <Informer className="Informer" label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." view="filled" status="system" icon={IconCheck} />
-                    <Informer className="Informer" label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m" view="filled" status="system" icon={IconWarning} />
+                    <Informer className="Informer" label={testText} view="filled" status="system" icon={IconCheck} />
+                    <Informer className="Informer" label={testText} view="filled" status="system" icon={IconWarning} />
                     <div className="Groupe-Wrap">
-                        <Group items={store.Groupe1Rows} />
-                        <Group items={store.Groupe2Rows} />
-                        <Group items={store.Groupe3Rows} />
-                        <Group items={store.Groupe4Rows} />
+                        <Group items={store.groupe1Rows} />
+                        <Group items={store.groupe2Rows} />
+                        <Group items={store.groupe3Rows} />
+                        <Group items={store.groupe4Rows} />
                         { /* <Table */}
                         { /*    columns={store.GroupeColumn} */}
                         { /*    rows={store.Groupe1Rows} */}

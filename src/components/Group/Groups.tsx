@@ -4,13 +4,13 @@ import "./Group.scss";
 import { GroupeRowsType } from "../../store/MainPage/MainPage";
 
 interface Props {
-    items: Array<GroupeRowsType>
+    items: GroupeRowsType[]
 }
 
 const Group: FC<Props> = ({ items }) => {
     const parseItems = items.map((item) => (
-        <div className="Group-row" key={item.id}>
-            <div className="Group-field">
+        <div className="Group-Row" key={item.id}>
+            <div className="Group-Field">
                 {item.field}
                 {item.icon ? <img src={item.icon} /> : null}
             </div>
@@ -22,7 +22,7 @@ const Group: FC<Props> = ({ items }) => {
                     </NavLink>
 
                 ) : (
-                    <div className="Group-info">
+                    <div className="Group-Info">
                         {item.info}
                     </div>
                 )
@@ -30,14 +30,12 @@ const Group: FC<Props> = ({ items }) => {
         </div>
     ));
     return (
-        <>
-            <div className="Group-item">
-                <div className="Group-title">Группа</div>
-                <div className="Group-info-block">
-                    {parseItems}
-                </div>
+        <div className="Group-Item">
+            <div className="Group-Title">Группа</div>
+            <div className="Group-InfoBlock">
+                {parseItems}
             </div>
-        </>
+        </div>
     );
 };
 export default Group;

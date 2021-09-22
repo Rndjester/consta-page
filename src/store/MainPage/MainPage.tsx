@@ -3,7 +3,7 @@ import { TableColumn } from "@consta/uikit/Table";
 export type ChouseItem = string;
 
 type TableRowType = {
-    id: string | number,
+    id: string,
     field?: string,
     year?: number,
     type?: string,
@@ -29,9 +29,9 @@ export type OptionSelectType = {
     disabled?: boolean;
 };
 class MainPage {
-    ChouseGroupItems: ChouseItem[] = ["Пункт 1", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 5", "Пункт 6"];
+    choiseGroupItems: ChouseItem[] = ["Пункт 1", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 5", "Пункт 6"];
 
-    MainPageTableColumn: any = [
+    мainPageTableColumn: TableColumn<TableRowType>[] = [
         {
             title: "Месторождение",
             accessor: "field",
@@ -76,7 +76,7 @@ class MainPage {
         }
     ];
 
-    MainPageTableRows: any = [
+    мainPageTableRows: TableRowType[] = [
         {
             id: "row1",
             field: "Северное",
@@ -124,7 +124,7 @@ class MainPage {
         }
     ];
 
-    SelectOptions: OptionSelectType[] = [
+    selectOptions: OptionSelectType[] = [
         {
             label: "Первый",
             id: 1
@@ -151,7 +151,7 @@ class MainPage {
         }
     ];
 
-    selectItems: any = [
+    selectItems: OptionSelectType[] = [
         { label: "Параметр 1", id: 1 },
         { label: "Параметр 2", id: 2 },
         { label: "Параметр 3", id: 3 },
@@ -160,7 +160,7 @@ class MainPage {
         { label: "Параметр 6", id: 6 }
     ];
 
-    GroupeColumn: any = [
+    groupeColumn: TableColumn<GroupeRowsType>[] = [
         {
             title: "Группа",
             align: "left",
@@ -173,7 +173,7 @@ class MainPage {
         }
     ];
 
-    Groupe1Rows: GroupeRowsType[] = [
+    groupe1Rows: GroupeRowsType[] = [
         {
             id: "1",
             field: "XXXX",
@@ -226,7 +226,7 @@ class MainPage {
         }
     ];
 
-    Groupe2Rows: GroupeRowsType[] = [
+    groupe2Rows: GroupeRowsType[] = [
         {
             id: "1",
             field: "XXXX",
@@ -254,7 +254,7 @@ class MainPage {
         }
     ];
 
-    Groupe3Rows: GroupeRowsType[] = [
+    groupe3Rows: GroupeRowsType[] = [
         {
             id: "1",
             field: "XXXX",
@@ -282,7 +282,7 @@ class MainPage {
         }
     ];
 
-    Groupe4Rows: GroupeRowsType[] = [
+    groupe4Rows: GroupeRowsType[] = [
         {
             id: "1",
             field: "XXXX",
